@@ -1,0 +1,86 @@
+.dashboard-container {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.chart-grid h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.chart-grid div {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.summary-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.card p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.card .more {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.card.blue {
+  background-color: #3498db;
+}
+
+.card.green {
+  background-color: #2ecc71;
+}
+
+.card.orange {
+  background-color: #f39c12;
+}
+
+.card.teal {
+  background-color: #1abc9c;
+}
