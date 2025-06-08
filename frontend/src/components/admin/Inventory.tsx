@@ -58,20 +58,25 @@ const InventoryTable = () => {
       <h2>Inventory List</h2>
 
       <div className="table-controls">
-        <div>
+        <div className="left-controls">
           Show{" "}
           <select>
             <option>10</option>
           </select>{" "}
           entries
         </div>
-        <div>
+
+        <div className="center-controls">
           Search:{" "}
           <input
             type="text"
             placeholder="Search..."
             onChange={(e) => setSearchTerm(e.target.value)}
           />
+        </div>
+
+        <div className="right-controls">
+          <button className="btn add">Add</button>
         </div>
       </div>
 
@@ -93,7 +98,19 @@ const InventoryTable = () => {
               <td>{index + 1}</td>
               <td>{item.name}</td>
               <td>{item.category}</td>
-              <td>{item.status}</td>
+              <td>
+                <span
+                  className={`status ${
+                    item.status === "In Stock"
+                      ? "in-stock"
+                      : item.status === "Low Stock"
+                      ? "low-stock"
+                      : "out-of-stock"
+                  }`}
+                >
+                  {item.status}
+                </span>
+              </td>
               <td>{item.quantity}</td>
               <td>₱{item.price.toFixed(2)}</td>
               <td>
