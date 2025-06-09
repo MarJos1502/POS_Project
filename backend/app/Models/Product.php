@@ -5,11 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-class Category extends Model
+class Product extends Model
 {
-    protected $fillable = ['name', 'image'];
+    protected $fillable = [
+        'name', 
+        'price', 
+        'image',
+        'brand',
+        'quantity',
+        'status'
 
-    protected $appends = ['image_url'];
+    ]; // Allow mass assignment
+
+    protected $appends = ['image_url']; // Add image URL dynamically
 
     // Accessor to get full URL for image
     public function getImageUrlAttribute()
