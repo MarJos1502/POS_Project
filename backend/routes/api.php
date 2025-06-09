@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SurveyController;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -29,3 +30,6 @@ Route::controller(ProductController::class)->group( function() {
     Route::delete('/products/{id}', [ProductController::class, 'destroy']);
 
 });
+
+Route::post('/surveys', [SurveyController::class, 'store']);
+Route::get('/surveys/status/{transaction_id}', [SurveyController::class, 'checkStatus']);
