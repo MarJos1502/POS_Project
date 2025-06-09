@@ -3,10 +3,10 @@
   background-color: white;
   font-family: sans-serif;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 5px 2px 22px rgba(0, 0, 0, 0.08);
   color: black;
   
-  margin: auto;
+  align-items: start; 
 }
 
 
@@ -53,25 +53,26 @@
 
 .right-controls {
   justify-content: flex-end;
+  
 }
 
-.btn.add {
-  background-color: #10b981;
-  color: #fff;
-  padding: 10px 30px;
-  border-radius: 4px;
+.add-button {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
   border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  font-size: 20px;
+  transition: background-color 0.3s ease;
 }
 
-.btn.add:hover {
-  background-color: #059669;
+.add-button:hover {
+  background-color: #0056b3;
 }
 
 .inventory-table {
-  width: 1570px;
+  width: 1510px;
   border-collapse: collapse;
   font-size: 20px;
 }
@@ -89,7 +90,7 @@
 }
 
 .btn {
-  padding: 6px 10px;
+  padding: 10px 20px;
   font-size: 20px;
   border: none;
   border-radius: 4px;

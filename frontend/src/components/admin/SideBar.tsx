@@ -31,7 +31,13 @@ function SideBar() {
           <li>
             <Link to="/inventory">
               <img src={inventory} alt="About Icon" className="nav-icon" />
-              Inventory
+              Product
+            </Link>
+          </li>
+          <li>
+            <Link to="/category">
+              <img src={inventory} alt="About Icon" className="nav-icon" />
+              Category
             </Link>
           </li>
           <li>
